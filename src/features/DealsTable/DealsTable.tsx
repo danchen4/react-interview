@@ -21,9 +21,7 @@ const DealsTable = (props: DealsTableProps) => {
   const dispatch = useDispatch();
   const onInitDeals = useCallback(() => dispatch(fetchDeals()), []);
 
-  console.log('DealsTable');
-
-  // Update table whenever deals change
+  // fetch deal table whenever updates to state are made
   useEffect(() => {
     onInitDeals();
   }, [onInitDeals]);

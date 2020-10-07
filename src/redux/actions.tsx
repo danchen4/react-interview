@@ -21,23 +21,21 @@ export const fetchDeals = () => async (dispatch: Dispatch) => {
 
 export const createDeals = (deal: DealType) => async (dispatch: Dispatch) => {
   const url = `http://localhost:8000/deals`;
-  console.log('createDeals', deal);
   try {
     // Fetch deals to find the highest id number
     let newId = 1;
     let response = await fetch(url);
     let data = await response.json();
 
-    // New ID number will be incremented from highest id number
+    // Get highest ID number from database
     for (let deal of data) {
       if (deal.id > newId) {
         newId = deal.id;
       }
     }
+    // Increment to get the next ID
     newId++;
-
     const dealWithId = { ...deal, id: newId };
-
     await fetch(url, {
       method: 'POST',
       headers: {

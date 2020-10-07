@@ -68,6 +68,7 @@ const DealForm = () => {
   const [inputForm, setInputForm] = useState(DEFAULT_INPUT_FORM);
   const [formIsValid, setFormIsValid] = useState(false);
 
+  // couldn't figure out Thunk and TS on Container.tsx
   const dispatch = useDispatch();
   const onCreateDeals = (deal: DealType) => dispatch(createDeals(deal));
 
@@ -96,7 +97,6 @@ const DealForm = () => {
 
     // set input field values to rerender the view
     setInputForm(updatedInputForm);
-    // This should be done on submit since it no longe affects the input values
     setNewDeal({ ...newDeal, [property]: e.target.value });
     // set formisValid to determine if whole form is valid
     setFormIsValid(formIsValid);
@@ -104,8 +104,6 @@ const DealForm = () => {
 
   const handleCreateDeal = (e: React.SyntheticEvent) => {
     e.preventDefault();
-
-    console.log('newDeal', newDeal);
 
     onCreateDeals({ ...newDeal });
     // Reset state for the next deal input.
