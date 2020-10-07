@@ -1,4 +1,4 @@
-@import "../../../theme.scss";
+@import '../../../theme.scss';
 
 .DealsTableRow {
   border-top: 1px solid #c1c3d1;
@@ -25,7 +25,7 @@
     background: #ebebeb;
   }
 
-  &:nth-child(odd):hover .DeaslTable--cell {
+  &:nth-child(odd):hover .DealsTable--cell {
     background: #4e5066;
   }
 
@@ -48,6 +48,25 @@
 
     &:last-child {
       border-right: 0px;
+
+      text-align: center;
     }
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--publish {
+    cursor: pointer;
+    color: $LoanstreetGreenDark;
+  }
+
+  &--delete {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: $Rose;
   }
 }

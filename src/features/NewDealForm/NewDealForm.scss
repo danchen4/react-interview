@@ -1,7 +1,6 @@
-@import "../../theme.scss";
+@import '../../theme.scss';
 
 .NewDealForm {
-
   &--div {
     margin-bottom: 16px;
     display: flex;
@@ -17,5 +16,26 @@
   &--button {
     margin-top: 8px;
     align-self: flex-end;
+
+    &:disabled {
+      background-color: grey;
+      color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  &--error {
+    &--label {
+      color: $Rose;
+    }
+
+    &--input {
+      border: 1px solid $Rose;
+    }
+
+    &--text {
+      padding-top: 3px;
+      color: $Rose;
+    }
   }
 }

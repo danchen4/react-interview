@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600");
-@import "./theme.scss";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600');
+@import './theme.scss';
 
 body {
   &,
   input,
   button {
-    font-family: "IBM Plex Sans", serif;
+    font-family: 'IBM Plex Sans', serif;
   }
 
   margin: 0;
- 
+
   color: $Ink;
   font-size: $Body;
   background-color: $Fog;
@@ -62,7 +62,9 @@ body {
     padding: 16px 24px 16px;
     height: fit-content;
     background-color: $Marshmellow;
-    height: 80vh;
+    // height: 80vh;
+
+    min-height: 80vh;
 
     &--header {
       align-self: flex-start;

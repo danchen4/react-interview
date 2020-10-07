@@ -1,4 +1,4 @@
-@import "../../theme.scss";
+@import '../../theme.scss';
 
 .DealsTable {
   background: white;
@@ -27,6 +27,14 @@
     &:last-child {
       border-top-right-radius: 10px;
       border-right: none;
+    }
+  }
+
+  &--sort {
+    display: flex;
+
+    &--child {
+      flex: 1;
     }
   }
 }
